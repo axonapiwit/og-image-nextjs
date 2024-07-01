@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <title>Hello world</title>
+        <meta
+          property="og:image"
+          content="http://192.168.1.104:3000/api/og"
+        />
+        <meta property="og:title" content="Product Name" />
+        {/* <meta property="og:image" content="https://example.com/path/to/product-image.jpg" /> */}
+        <meta property="og:description" content="Buy this amazing product for only $99.99!" />
+        <meta property="og:url" content="https://example.com/product-page-url" />
+      </head>
+      <body className={inter.className}>
+        <ReactQueryProvider>
+          {children}
+        </ReactQueryProvider>
+      </body>
     </html>
   );
 }
