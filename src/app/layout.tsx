@@ -19,13 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Hello world</title>
-        {/* <meta
-          property="og:image"
-          content="http://localhost:3000/api/og"
-        /> */}
           <meta
           property="og:image"
-          content="https://img.freepik.com/free-photo/anime-style-character-space_23-2151134277.jpg?t=st=1719825547~exp=1719829147~hmac=6fa9ce7031501066d7e8ba8e2582b20644dec5fff6db8132664f45d61fd914b4&w=1800"
+          content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"
         />
         <meta property="og:title" content="Product Name" />
         <meta property="og:description" content="Buy this amazing product for only $99.99!" />
