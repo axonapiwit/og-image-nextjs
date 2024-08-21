@@ -1,7 +1,9 @@
-import { ImageResponse } from 'next/og';
+// Import necessary types from Next.js or next/og
+import {  ImageResponse } from 'next/og';
+import { NextRequest } from 'next/server';
 
-export async function GET(id: string) {
-
+// Define your API route handler function
+export async function GET(req: NextRequest) {
   let URL;
   const imagef = await fetch(`https://picsum.photos/id/1/info`, {
     next: { revalidate: 10 },
@@ -25,10 +27,11 @@ export async function GET(id: string) {
     );
     data = await fetchData.json();
   } catch (error) {
-    //Using Fallback to narrow error boundary
-    //...
+    // Handle errors appropriately
+    console.error('Error fetching data:', error);
   }
 
+  // Construct and return the response
   return new ImageResponse(
     (
       <div tw="flex flex-col w-full h-full items-center justify-center bg-white">

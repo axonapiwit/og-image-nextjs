@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <title>Hello world</title>
-        <meta
+          <meta
           property="og:image"
           content={`https://cdn.maxion.gg/landverse/image/market/market_101.png`}
         />
